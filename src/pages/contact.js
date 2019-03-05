@@ -77,13 +77,13 @@ class contactForm extends React.Component {
             <Container>
               <p>Hey, please fill in the form below.</p>
               <Form
-                name="pricing-page"
+                name="contact"
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
                 onSubmit={this.handleSubmit}
               >
-                <input type="hidden" name="form-name" value="pricing-page" />
+                <input type="hidden" name="form-name" value="contact" />
                 <p hidden>
                   <label>
                     Don’t fill this out:{' '}
