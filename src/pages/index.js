@@ -6,12 +6,12 @@ import Layout from '../components/layout'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi Naomi!</h1>
+    <h1>Hi there!</h1>
     <p>Welcome to my new Gatsby site.</p>
-    <p>Which I just deployed on Netlify.</p>
-    <Link to="/about/">ABOUT</Link><br></br>
-    <Link to="/page-2/">Page 2</Link>
-    <img src={polarBear} alt=""></img>
+    <Link to="/about/">ABOUT</Link>
+    <br />
+    <Link to="/contact">Contact</Link>
+    <img src={polarBear} alt="" />
   </Layout>
 )
 
