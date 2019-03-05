@@ -1,6 +1,6 @@
 // eslint-disable-next-line
 import React from 'react'
-import { Link } from 'gatsby'
+//import { Link } from 'gatsby'
 import Layout from '../components/layout'
 
 /** @jsx jsx */
@@ -32,6 +32,7 @@ class contactForm extends React.Component {
     e.preventDefault()
     const form = e.target
     const { name, email, phoneNumber, company, jobTitle, message } = this.state
+    console.log('before post: ', this.state)
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -51,6 +52,7 @@ class contactForm extends React.Component {
         // }),
       }),
     })
+      .then(res => console.log(res))
       .then(
         this.setState({
           submitted: true,
@@ -65,7 +67,6 @@ class contactForm extends React.Component {
         {this.state.submitted ? (
           <Layout>
             <Cont>
-              <Link to="/">Go back to the homepage</Link>
               <ThankYou>
                 {/* <img src={tickImg} alt="tick logo" /> */}
                 <p>Thank you!</p>
@@ -76,7 +77,7 @@ class contactForm extends React.Component {
           <Page>
             <Container>
               <p>Hey, please fill in the form below.</p>
-              <Form
+              <form
                 name="contact"
                 method="POST"
                 data-netlify="true"
@@ -144,7 +145,7 @@ class contactForm extends React.Component {
                     SUBMIT
                   </Button>
                 </div>
-              </Form>
+              </form>
             </Container>
           </Page>
         )}
