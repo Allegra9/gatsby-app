@@ -78,7 +78,7 @@ class contactForm extends React.Component {
           <Page>
             <Container>
               <p>Hey, please fill in the form below.</p>
-              <form
+              <Form
                 name="contact"
                 method="POST"
                 data-netlify="true"
@@ -146,7 +146,7 @@ class contactForm extends React.Component {
                     SUBMIT
                   </Button>
                 </div>
-              </form>
+              </Form>
             </Container>
           </Page>
         )}
