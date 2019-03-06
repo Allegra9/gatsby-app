@@ -15,13 +15,13 @@ function encode(data) {
 
 class contactForm extends React.Component {
   state = {
-    name: '',
-    email: '',
-    phoneNumber: '',
-    company: '',
-    jobTitle: '',
-    message: '',
-    submitted: false,
+    // name: '',
+    // email: '',
+    // phoneNumber: '',
+    // company: '',
+    // jobTitle: '',
+    // message: '',
+    // submitted: false,
   }
 
   handleChange = e => {
@@ -31,19 +31,20 @@ class contactForm extends React.Component {
   handleSubmit = e => {
     e.preventDefault()
     const form = e.target
-    const { name, email, phoneNumber, company, jobTitle, message } = this.state
+    //const { name, email, phoneNumber, company, jobTitle, message } = this.state
     console.log('before post: ', this.state)
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        name,
-        email,
-        phoneNumber,
-        company,
-        jobTitle,
-        message,
+        ...this.state,
+        // name,
+        // email,
+        // phoneNumber,
+        // company,
+        // jobTitle,
+        // message,
         // message: JSON.stringify({
         //   phone: phoneNumber,
         //   company,
