@@ -2,11 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-
+import ContactForm from '../components/contactForm'
 const SecondPage = () => (
   <Layout>
-    <h1>Oh la la, seriously.</h1>
-    <Link to="/">Go back to the homepage</Link>
+    <ContactForm demo />
   </Layout>
 )
 
