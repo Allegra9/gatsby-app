@@ -1,7 +1,6 @@
 // eslint-disable-next-line
 import React from 'react'
-//import { Link } from 'gatsby'
-import Layout from '../components/layout'
+import otterNext from '../images/otterNext.gif'
 
 /** @jsx jsx */
 import { jsx } from '@emotion/core'
@@ -21,7 +20,7 @@ class contactForm extends React.Component {
     // company: '',
     // jobTitle: '',
     // message: '',
-    // submitted: false,
+    //submitted: false
   }
 
   handleChange = e => {
@@ -66,93 +65,95 @@ class contactForm extends React.Component {
     return (
       <React.Fragment>
         {this.state.submitted ? (
-          <Layout>
-            <Cont>
-              <ThankYou>
-                {/* <img src={tickImg} alt="tick logo" /> */}
-                <p>Thank you!</p>
-              </ThankYou>
-            </Cont>
-          </Layout>
+          <Cont>
+            <ThankYou>
+              <h1>Thank you, next!</h1>
+              <img src={otterNext} alt="" />
+            </ThankYou>
+          </Cont>
         ) : (
-          <Page>
-            <Container>
-              <p>Hey, please fill in the form below.</p>
-              <Form
-                name={this.props.demo ? 'second-page' : 'contact'}
-                method="POST"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                onSubmit={this.handleSubmit}
-              >
+          <Container>
+            <p>Hey, please fill in the form below to link up:</p>
+            <Form
+              name={this.props.demo ? 'second-page' : 'contact'}
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              onSubmit={this.handleSubmit}
+            >
+              <input
+                type="hidden"
+                name="form-name"
+                value={this.props.demo ? 'second-page' : 'contact'}
+              />
+              <p hidden>
+                <label>
+                  Don’t fill this out:{' '}
+                  <input name="bot-field" onChange={this.handleChange} />
+                </label>
+              </p>
+              <div>
                 <input
-                  type="hidden"
-                  name="form-name"
-                  value={this.props.demo ? 'second-page' : 'contact'}
+                  type="text"
+                  name="name"
+                  onChange={this.handleChange}
+                  required
+                  placeholder="Yo name"
                 />
-                <p hidden>
-                  <label>
-                    Don’t fill this out:{' '}
-                    <input name="bot-field" onChange={this.handleChange} />
-                  </label>
-                </p>
-                <div>
-                  <label htmlFor="name">NAME:*</label>
-                  <input
-                    type="text"
-                    name="name"
-                    onChange={this.handleChange}
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email">EMAIL:*</label>
-                  <input
-                    type="email"
-                    name="email"
-                    onChange={this.handleChange}
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone number">PHONE NUMBER:*</label>
-                  <input
-                    type="tel"
-                    name="phoneNumber"
-                    onChange={this.handleChange}
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="company">COMPANY:*</label>
-                  <input
-                    type="text"
-                    name="company"
-                    onChange={this.handleChange}
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="job title">JOB TITLE:*</label>
-                  <input
-                    type="text"
-                    name="jobTitle"
-                    onChange={this.handleChange}
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message">MESSAGE:</label>
-                  <textarea name="message" onChange={this.handleChange} />
-                </div>
-                <div>
-                  <Button green type="submit">
-                    SUBMIT
-                  </Button>
-                </div>
-              </Form>
-            </Container>
-          </Page>
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="insta"
+                  onChange={this.handleChange}
+                  required
+                  placeholder="Yo insta"
+                />
+              </div>
+              <div>
+                <input
+                  type="tel"
+                  name="phoneNumber"
+                  onChange={this.handleChange}
+                  required
+                  placeholder="Yo phone number"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="otters"
+                  onChange={this.handleChange}
+                  required
+                  placeholder="So do you like otters?"
+                />
+              </div>
+              <div>
+                <input
+                  type="text"
+                  name="snap"
+                  onChange={this.handleChange}
+                  required
+                  placeholder="Yo snap"
+                />
+              </div>
+              <div>
+                <label htmlFor="message">
+                  What makes you unique? Why you wanna hang out?{' '}
+                </label>
+                <textarea name="message" onChange={this.handleChange} />
+              </div>
+              <div>
+                <label htmlFor="message2">You wear adidas?</label>
+                <textarea name="message2" onChange={this.handleChange} />
+              </div>
+              <div>
+                <Button green type="submit">
+                  SEND and don't look back
+                </Button>
+              </div>
+            </Form>
+          </Container>
         )}
       </React.Fragment>
     )
@@ -161,11 +162,6 @@ class contactForm extends React.Component {
 
 export default contactForm
 
-const Page = styled.div`
-  background-color: #f5f5f5;
-  padding: 5em 0;
-  padding-top: 1em;
-`
 const Cont = styled.div`
   background-color: #fff;
   padding: 10em 0;
@@ -177,7 +173,6 @@ const Cont = styled.div`
   }
 `
 const ThankYou = styled.div`
-  background-color: #f7f7f7;
   font-family: Muli;
   border-radius: 5px;
   border: 1px solid #b5b7b6;
@@ -218,7 +213,7 @@ const Form = styled.form`
   padding-top: 0;
   text-align: left;
   div {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     label {
       color: grey;
       text-align: left;

@@ -19,11 +19,11 @@ const Menu = () => {
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to="/about">About</Link>
-        </li>
+        </li> */}
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/next">Next</Link>
         </li>
       </ul>
     </div>

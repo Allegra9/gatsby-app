@@ -1,17 +1,16 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import polarBear from '../images/polar_bear.jpg'
+// import { Link } from 'gatsby'
+// import polarBear from '../images/polar_bear.jpg'
+import otter from '../images/otter.jpg'
 
 import Layout from '../components/layout'
 
 const IndexPage = () => (
   <Layout>
-    <h1>Hi there!</h1>
-    <p>Welcome to my new Gatsby site.</p>
-    <Link to="/about/">ABOUT</Link>
-    <br />
-    <Link to="/contact">Contact</Link>
-    <img src={polarBear} alt="" />
+    <h1>Hey there!</h1>
+    <h4>Sup boy or girl (or undecided, it's ok)</h4>
+    <p>Wanna link up? Fill in the application form on the next page.</p>
+    <img src={otter} alt="otter pic" width="400px" />
   </Layout>
 )
 

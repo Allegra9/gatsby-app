@@ -8,10 +8,10 @@ import ContactForm from '../components/contactForm'
 import { jsx } from '@emotion/core'
 //import styled from '@emotion/styled'
 
-const ContactPage = () => (
+const NextPage = () => (
   <Layout>
     <ContactForm />
   </Layout>
 )
 
-export default ContactPage
+export default NextPage
