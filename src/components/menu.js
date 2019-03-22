@@ -13,7 +13,8 @@ const Menu = () => {
         style={{
           listStyle: 'none',
           display: 'flex',
-          justifyContent: 'space-evenly',
+          justifyContent: 'space-around',
+          margin: '0',
         }}
       >
         <li>

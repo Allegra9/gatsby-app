@@ -199,6 +199,7 @@ const Container = styled.div`
   width: 50%;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
   @media screen and (max-width: 1024px) {
     width: 60%;
   }
@@ -206,7 +207,8 @@ const Container = styled.div`
     width: 80%;
   }
   @media screen and (max-width: 750px) {
-    width: 95%;
+    width: 100%;
+    padding: 0;
   }
 `
 const Form = styled.form`
@@ -248,7 +250,7 @@ const Button = styled.button`
   border: 0;
   cursor: pointer;
   height: 2.5em;
-  padding: 0 4.5em;
+  padding: 0 3.5em;
   white-space: nowrap;
   color: #fff;
   text-decoration: none;
@@ -257,6 +259,8 @@ const Button = styled.button`
     padding: 0 2em;
   }
   @media screen and (max-width: 750px) {
-    padding: 0 2.5em;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
 `
