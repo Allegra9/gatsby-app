@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 
 const Menu = () => {
   return (
@@ -17,15 +17,15 @@ const Menu = () => {
           margin: '0',
         }}
       >
-        <li>
+        {/* <li>
           <Link to="/">Home</Link>
-        </li>
+        </li> */}
         {/* <li>
           <Link to="/about">About</Link>
         </li> */}
-        <li>
+        {/* <li>
           <Link to="/next">Next</Link>
-        </li>
+        </li> */}
       </ul>
     </div>
   )

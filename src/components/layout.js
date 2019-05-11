@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
-import Menu from './menu'
+// import Menu from './menu'
 import './layout.css'
 
 const Layout = ({ children }) => (
@@ -21,7 +21,7 @@ const Layout = ({ children }) => (
     render={data => (
       <>
         <Helmet
-          title="Otters link"
+          title="Pandas"
           meta={[
             { name: 'description', content: 'Sample' },
             { name: 'keywords', content: 'sample, something' },
@@ -29,18 +29,9 @@ const Layout = ({ children }) => (
         >
           <html lang="en" />
         </Helmet>
-        <Header siteTitle="Otters link" />
-        <Menu />
-        <div
-          style={{
-            margin: '0 auto',
-            maxWidth: 960,
-            padding: '0px 1.0875rem 1.45rem',
-            paddingTop: 0,
-          }}
-        >
-          {children}
-        </div>
+        <Header siteTitle={String.fromCodePoint(0x1f43c)} />
+        {/* <Menu /> */}
+        {children}
       </>
     )}
   />
